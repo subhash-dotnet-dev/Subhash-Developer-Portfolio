@@ -24,6 +24,10 @@ function copyStaticAssetsPlugin() {
       // Copy data files (needed at runtime for sub-pages)
       cpSync('data', 'dist/data', { recursive: true });
 
+      // Copy CSS and JS (sub-pages reference these via ../css/ and ../js/)
+      cpSync('css', 'dist/css', { recursive: true });
+      cpSync('js', 'dist/js', { recursive: true });
+
       // Copy social link file
       cpSync('social link subhash.txt', 'dist/social link subhash.txt');
     },

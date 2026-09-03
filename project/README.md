@@ -51,6 +51,4 @@ npm run build
 
 ## Profile Image
 
-Replace `assets/images/profile/subhash-professional-profile.svg` with your actual photo
-(named `subhash-professional-profile.png` and update the reference in `data/profile.js`
-and `components/hero.html`).
+The profile image is `assets/images/profile/subhash-professional-profile.png`.
