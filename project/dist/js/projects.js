@@ -188,6 +188,10 @@
     const grid = document.getElementById(gridId);
     if (!grid || !window.projectsData) return;
 
+    const onSubPage = window.location.pathname.includes('/pages/');
+    const imgBase = onSubPage ? '../' : '';
+    const detailBase = onSubPage ? 'project-details.html' : 'pages/project-details.html';
+
     function render(filter) {
       const filtered = filter === 'All'
         ? window.projectsData
@@ -199,10 +203,6 @@
         grid.innerHTML = '<div class="no-results">No projects found in this category.</div>';
         return;
       }
-
-      const detailBase = window.location.pathname.includes('/pages/')
-        ? 'project-details.html'
-        : 'pages/project-details.html';
 
       grid.innerHTML = filtered.map((project) => {
         const tagsHtml = project.tags.map((t) => `<span class="project-card-tag">${t}</span>`).join('');
@@ -227,7 +227,7 @@
 
         return `<div class="project-card">
           <div class="project-card-image">
-            <img src="${project.image}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='var(--bg-elevated)'" />
+            <img src="${imgBase}${project.image}" alt="${project.title}" loading="lazy" onerror="this.style.display='none'; this.parentElement.style.background='var(--bg-elevated)'" />
             <div class="project-card-overlay">
               ${githubLink}
               ${demoLink}
@@ -284,6 +284,7 @@
       return;
     }
 
+    const imgBase = window.location.pathname.includes('/pages/') ? '../' : '';
     const tagsHtml = project.tags.map((t) => `<span class="project-card-tag">${t}</span>`).join('');
     const techHtml = project.technologies.map((t) => `<span class="tech-badge">${t}</span>`).join('');
     const featuresHtml = project.features.map((f) => `<li>${f}</li>`).join('');
@@ -313,7 +314,7 @@
           <div class="project-detail-tags">${tagsHtml}</div>
         </div>
 
-        <img src="${project.image}" alt="${project.title}" class="project-detail-image reveal" onerror="this.style.display='none'" />
+        <img src="${imgBase}${project.image}" alt="${project.title}" class="project-detail-image reveal" onerror="this.style.display='none'" />
 
         <div class="project-detail-layout">
           <div class="project-detail-content">
