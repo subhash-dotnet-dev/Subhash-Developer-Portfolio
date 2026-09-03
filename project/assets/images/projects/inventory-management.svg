@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="360" viewBox="0 0 640 360">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#161a23"/>
+      <stop offset="100%" stop-color="#0a0b0f"/>
+    </linearGradient>
+    <linearGradient id="acc" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#60a5fa"/>
+    </linearGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#bg)"/>
+  <rect x="40" y="70" width="560" height="220" rx="12" fill="#1c2130" stroke="url(#acc)" stroke-width="1" opacity="0.9"/>
+  <rect x="60" y="90" width="140" height="60" rx="8" fill="#111319" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="76" y="106" width="60" height="8" rx="4" fill="#60a5fa" opacity="0.5"/>
+  <rect x="76" y="122" width="100" height="6" rx="3" fill="#a8b0c0" opacity="0.2"/>
+  <rect x="76" y="134" width="80" height="6" rx="3" fill="#a8b0c0" opacity="0.15"/>
+  <rect x="220" y="90" width="140" height="60" rx="8" fill="#111319" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="236" y="106" width="50" height="8" rx="4" fill="#22c55e" opacity="0.5"/>
+  <rect x="236" y="122" width="100" height="6" rx="3" fill="#a8b0c0" opacity="0.2"/>
+  <rect x="236" y="134" width="70" height="6" rx="3" fill="#a8b0c0" opacity="0.15"/>
+  <rect x="380" y="90" width="140" height="60" rx="8" fill="#111319" stroke="rgba(255,255,255,0.06)"/>
+  <rect x="396" y="106" width="55" height="8" rx="4" fill="#f59e0b" opacity="0.5"/>
+  <rect x="396" y="122" width="100" height="6" rx="3" fill="#a8b0c0" opacity="0.2"/>
+  <rect x="396" y="134" width="90" height="6" rx="3" fill="#a8b0c0" opacity="0.15"/>
+  <rect x="60" y="170" width="520" height="90" rx="8" fill="#0a0b0f" opacity="0.4"/>
+  <text x="80" y="195" font-family="'JetBrains Mono',monospace" font-size="10" fill="#60a5fa">SELECT * FROM Inventory</text>
+  <text x="80" y="213" font-family="'JetBrains Mono',monospace" font-size="10" fill="#a8b0c0">WHERE stock &lt; reorder_level</text>
+  <text x="80" y="231" font-family="'JetBrains Mono',monospace" font-size="10" fill="#22c55e">-- 3 items below threshold</text>
+  <text x="320" y="320" font-family="'JetBrains Mono',monospace" font-size="14" fill="#60a5fa" text-anchor="middle">Inventory Management System</text>
+</svg>

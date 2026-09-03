@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#0a0b0f" />
+  <title>Subhash Yadav — .NET Full Stack Developer</title>
+  <meta name="description" content="Subhash Yadav — .NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, and modern web development. View projects, experience, and skills." />
+  <meta name="keywords" content="Subhash Yadav, .NET Developer, Full Stack Developer, C#, ASP.NET Core, SQL Server, Web API, Entity Framework, React.js, JavaScript" />
+  <meta name="author" content="Subhash Yadav" />
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Subhash Yadav — .NET Full Stack Developer" />
+  <meta property="og:description" content=".NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, and modern web development." />
+  <meta property="og:image" content="assets/images/profile/subhash-professional-profile.svg" />
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Subhash Yadav — .NET Full Stack Developer" />
+  <meta name="twitter:description" content=".NET Full Stack Developer specializing in C#, ASP.NET Core, SQL Server, and modern web development." />
+
+  <link rel="canonical" href="https://subhashyadav.dev/" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='20' fill='%233b82f6'/><text x='50' y='68' font-size='48' font-weight='bold' fill='white' text-anchor='middle' font-family='monospace'>SY</text></svg>" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <!-- Data files (loaded early) -->
+  <script type="module" src="data/profile.js"></script>
+  <script type="module" src="data/social-links.js"></script>
+  <script type="module" src="data/skills.js"></script>
+  <script type="module" src="data/projects.js"></script>
+  <script type="module" src="data/experience.js"></script>
+  <script type="module" src="data/education.js"></script>
+  <script type="module" src="data/certifications.js"></script>
+</head>
+<body>
+  <!-- Scroll progress -->
+  <div class="scroll-progress" id="scrollProgress" aria-hidden="true"></div>
+
+  <!-- Navbar -->
+  <div data-component="navbar"></div>
+
+  <!-- Mobile menu -->
+  <div data-component="mobile-menu"></div>
+
+  <!-- Hero -->
+  <div data-component="hero"></div>
+
+  <!-- About -->
+  <div data-component="about"></div>
+
+  <!-- Experience -->
+  <div data-component="experience"></div>
+
+  <!-- Skills -->
+  <div data-component="skills"></div>
+
+  <!-- Projects -->
+  <div data-component="projects"></div>
+
+  <!-- Education -->
+  <div data-component="education"></div>
+
+  <!-- Certifications -->
+  <div data-component="certifications"></div>
+
+  <!-- Contact -->
+  <div data-component="contact"></div>
+
+  <!-- Footer -->
+  <div data-component="footer"></div>
+
+  <!-- Cert modal -->
+  <div class="cert-modal" id="certModal" role="dialog" aria-modal="true" aria-labelledby="certModalTitle" aria-hidden="true">
+    <button class="cert-modal-close" id="certModalClose" aria-label="Close certificate preview">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+    </button>
+    <div class="cert-modal-content" id="certModalContent"></div>
+  </div>
+
+  <!-- Scripts -->
+  <script type="module" src="js/theme.js"></script>
+  <script type="module" src="js/navigation.js"></script>
+  <script type="module" src="js/animations.js"></script>
+  <script type="module" src="js/projects.js"></script>
+  <script type="module" src="js/contact.js"></script>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

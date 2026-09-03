@@ -1,0 +1,149 @@
+/* ============================================
+   ANIMATIONS.CSS — Keyframes & Reveal
+   ============================================ */
+
+/* ---------- KEYFRAMES ---------- */
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+@keyframes glow-drift {
+  0% { transform: translate(0, 0) scale(1); }
+  100% { transform: translate(40px, 30px) scale(1.1); }
+}
+
+@keyframes float-chip {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fade-up {
+  from { opacity: 0; transform: translateY(24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fade-down {
+  from { opacity: 0; transform: translateY(-24px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slide-left {
+  from { opacity: 0; transform: translateX(40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes slide-right {
+  from { opacity: 0; transform: translateX(-40px); }
+  to { opacity: 1; transform: translateX(0); }
+}
+
+@keyframes scale-in {
+  from { opacity: 0; transform: scale(0.92); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes image-reveal {
+  from { opacity: 0; clip-path: inset(100% 0 0 0); }
+  to { opacity: 1; clip-path: inset(0 0 0 0); }
+}
+
+/* ---------- HERO ENTRANCE ---------- */
+.hero-status { animation: fade-up 600ms ease-out both; }
+.hero-greeting { animation: fade-up 600ms ease-out 100ms both; }
+.hero-name { animation: fade-up 600ms ease-out 200ms both; }
+.hero-title { animation: fade-up 600ms ease-out 300ms both; }
+.hero-intro { animation: fade-up 600ms ease-out 400ms both; }
+.hero-cta { animation: fade-up 600ms ease-out 500ms both; }
+.hero-social { animation: fade-up 600ms ease-out 600ms both; }
+.profile-visual { animation: scale-in 800ms ease-out 300ms both; }
+.float-chip-1 { animation: float-chip 4s ease-in-out 1s infinite, fade-up 600ms ease-out 700ms both; }
+.float-chip-2 { animation: float-chip 4s ease-in-out 1.5s infinite, fade-up 600ms ease-out 800ms both; }
+.float-chip-3 { animation: float-chip 4s ease-in-out 2s infinite, fade-up 600ms ease-out 900ms both; }
+.float-chip-4 { animation: float-chip 4s ease-in-out 2.5s infinite, fade-up 600ms ease-out 1000ms both; }
+.profile-badge { animation: fade-up 600ms ease-out 1100ms both; }
+
+/* ---------- SCROLL REVEAL ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 600ms ease-out, transform 600ms ease-out;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-delay-1 { transition-delay: 100ms; }
+.reveal-delay-2 { transition-delay: 200ms; }
+.reveal-delay-3 { transition-delay: 300ms; }
+.reveal-delay-4 { transition-delay: 400ms; }
+.reveal-delay-5 { transition-delay: 500ms; }
+
+/* ---------- STAGGERED CHILDREN ---------- */
+.stagger > * {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 500ms ease-out, transform 500ms ease-out;
+}
+
+.stagger.visible > * {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.stagger.visible > *:nth-child(1) { transition-delay: 50ms; }
+.stagger.visible > *:nth-child(2) { transition-delay: 100ms; }
+.stagger.visible > *:nth-child(3) { transition-delay: 150ms; }
+.stagger.visible > *:nth-child(4) { transition-delay: 200ms; }
+.stagger.visible > *:nth-child(5) { transition-delay: 250ms; }
+.stagger.visible > *:nth-child(6) { transition-delay: 300ms; }
+
+/* ---------- REDUCED MOTION ---------- */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .float-chip-1,
+  .float-chip-2,
+  .float-chip-3,
+  .float-chip-4 {
+    animation: none;
+  }
+
+  .hero-bg::before,
+  .hero-bg::after {
+    animation: none;
+  }
+
+  .reveal {
+    opacity: 1;
+    transform: none;
+  }
+
+  .stagger > * {
+    opacity: 1;
+    transform: none;
+  }
+}
