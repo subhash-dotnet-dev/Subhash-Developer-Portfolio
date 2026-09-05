@@ -68,8 +68,29 @@
     display: flex;
   }
 
-  .nav-brand-name span:last-child {
-    display: none;
+  .nav-brand-name {
+    font-size: var(--fs-sm);
+  }
+
+  .nav-brand-mark {
+    width: 38px;
+    height: 38px;
+  }
+
+  .theme-switch {
+    width: 56px;
+    height: 30px;
+  }
+
+  .theme-switch-thumb {
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    left: 3px;
+  }
+
+  [data-theme="light"] .theme-switch-thumb {
+    transform: translateX(26px);
   }
 
   /* Hero becomes vertical */
@@ -302,8 +323,27 @@
 
 /* ---------- 360px and below ---------- */
 @media (max-width: 360px) {
-  .nav-brand-name span:first-child {
+  .nav-brand-name {
     font-size: var(--fs-xs);
+  }
+
+  .nav-brand-mark {
+    width: 34px;
+    height: 34px;
+  }
+
+  .theme-switch {
+    width: 50px;
+    height: 26px;
+  }
+
+  .theme-switch-thumb {
+    width: 20px;
+    height: 20px;
+  }
+
+  [data-theme="light"] .theme-switch-thumb {
+    transform: translateX(24px);
   }
 
   .hero-name {
@@ -327,7 +367,7 @@
   .hero-bg,
   .hero-social,
   .footer-social,
-  .theme-toggle,
+  .theme-switch,
   .nav-menu-btn {
     display: none !important;
   }

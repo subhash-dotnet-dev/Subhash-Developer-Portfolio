@@ -22,19 +22,28 @@
 
   applyTheme(getInitialTheme());
 
+  function initThemeToggle() {
+    const toggle = document.getElementById('themeToggle');
+    if (toggle && !toggle.hasAttribute('data-theme-init')) {
+      toggle.setAttribute('data-theme-init', 'true');
+      toggle.setAttribute('aria-checked', root.getAttribute('data-theme') === 'light' ? 'true' : 'false');
+      toggle.addEventListener('click', toggleTheme);
+      toggle.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          toggleTheme();
+        }
+      });
+    }
+  }
+
   function toggleTheme() {
     const current = root.getAttribute('data-theme');
     const next = current === 'dark' ? 'light' : 'dark';
     applyTheme(next);
     localStorage.setItem(STORAGE_KEY, next);
-  }
-
-  function initThemeToggle() {
     const toggle = document.getElementById('themeToggle');
-    if (toggle && !toggle.hasAttribute('data-theme-init')) {
-      toggle.setAttribute('data-theme-init', 'true');
-      toggle.addEventListener('click', toggleTheme);
-    }
+    if (toggle) toggle.setAttribute('aria-checked', next === 'light' ? 'true' : 'false');
   }
 
   document.addEventListener('DOMContentLoaded', initThemeToggle);

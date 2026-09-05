@@ -62,6 +62,34 @@
   to { opacity: 1; clip-path: inset(0 0 0 0); }
 }
 
+/* ---------- NAVBAR ENTRANCE ---------- */
+.navbar {
+  animation: navbar-slide-in 500ms ease-out both;
+}
+
+@keyframes navbar-slide-in {
+  from { opacity: 0; transform: translateY(-100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.nav-brand-mark {
+  animation: brand-pop 600ms var(--t-smooth) 200ms both;
+}
+
+@keyframes brand-pop {
+  0% { opacity: 0; transform: scale(0.5) rotateY(180deg); }
+  60% { opacity: 1; transform: scale(1.1) rotateY(0); }
+  100% { opacity: 1; transform: scale(1) rotateY(0); }
+}
+
+.nav-links {
+  animation: fade-down 500ms ease-out 300ms both;
+}
+
+.nav-meta {
+  animation: fade-down 500ms ease-out 400ms both;
+}
+
 /* ---------- HERO ENTRANCE ---------- */
 .hero-status { animation: fade-up 600ms ease-out both; }
 .hero-greeting { animation: fade-up 600ms ease-out 100ms both; }
